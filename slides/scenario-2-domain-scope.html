@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scenario 2</title>
+<link rel="stylesheet" href="style/eweb.css">
+<style>
+  h1{font-size:44px;max-width:1080px}
+  .sub{max-width:760px}
+  .stage{position:absolute;left:72px;right:72px;top:272px;display:grid;grid-template-columns:310px 1fr 310px;gap:24px;align-items:stretch;z-index:2}
+  .box{background:#fff;border:1px solid var(--line);padding:20px 24px;min-height:230px}
+  .pain{box-shadow:8px 8px 0 var(--orange)}
+  .elastic{box-shadow:8px 8px 0 var(--blue)}
+  .benefit{box-shadow:8px 8px 0 var(--teal)}
+  .box h2{font-size:25px;font-weight:600;line-height:1.12;letter-spacing:-.7px;margin:10px 0}
+  .box p{font-size:16px;line-height:1.42;color:var(--char)}
+  .domain-map{margin-top:16px;border:1px solid var(--line);padding:12px;background:var(--bg)}
+  .row{display:grid;grid-template-columns:1fr 62px;gap:8px;align-items:center;margin-bottom:8px;font:600 11px var(--mono);letter-spacing:.03em;text-transform:uppercase}
+  .bar{height:10px;background:#fff;border:1px solid var(--line);position:relative}
+  .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--blue);transform-origin:left;animation:domainFlow 2.8s ease-in-out infinite}
+  .bar.warn i{background:var(--orange)}
+  .row:nth-child(2) .bar{box-shadow:0 0 0 0 rgba(255,126,98,.5);animation:warnHalo 2.8s ease-in-out infinite}
+  .row:nth-child(2) .bar i{animation-delay:.25s}
+  .row:nth-child(3) .bar i{animation-delay:.5s}
+  @keyframes domainFlow{0%,100%{transform:scaleX(.45);opacity:.55}45%,65%{transform:scaleX(1);opacity:1}}
+  @keyframes warnHalo{0%,100%{box-shadow:0 0 0 0 rgba(255,126,98,.0)}45%,65%{box-shadow:0 0 0 5px rgba(255,126,98,.22)}}
+</style>
+</head>
+<body class="soft" data-foot="Cisco Secure Email Gateway">
+<div class="z">
+  <div class="eyebrow in1">Scenario 02 · domain scope</div>
+  <h1 class="in2">Identify whether the issue affects one destination domain.</h1>
+  <p class="sub in3">The customer wants to understand whether delivery problems come from the gateway fleet or from a specific external destination.</p>
+</div>
+<section class="stage">
+  <article class="box pain in3">
+    <div class="tag">Pain</div>
+    <h2>One partner domain reports delayed or rejected email.</h2>
+    <p>Without domain-level visibility, the team spends time proving whether the problem is internal or external.</p>
+  </article>
+  <article class="box elastic in4">
+    <div class="tag">Elastic approach</div>
+    <h2>Compare delivery and bounce signals by domain.</h2>
+    <p>Elastic lets the administrator filter by destination domain and compare delivery, hard bounces, and soft bounces.</p>
+    <div class="domain-map">
+      <div class="row"><span>Primary domains</span><div class="bar"><i style="width:82%"></i></div></div>
+      <div class="row"><span>Partner domain</span><div class="bar warn"><i style="width:46%"></i></div></div>
+      <div class="row"><span>Other traffic</span><div class="bar"><i style="width:74%"></i></div></div>
+    </div>
+  </article>
+  <article class="box benefit in5">
+    <div class="tag">Benefit</div>
+    <h2>Separate internal operations from external delivery problems.</h2>
+    <p>The admin can communicate scope clearly and focus the next action on the right owner.</p>
+  </article>
+</section>
+<script src="style/eweb.js"></script>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

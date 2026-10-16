@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scenario 3</title>
+<link rel="stylesheet" href="style/eweb.css">
+<style>
+  h1{font-size:44px;max-width:1080px}
+  .sub{max-width:760px}
+  .stage{position:absolute;left:72px;right:72px;top:272px;display:grid;grid-template-columns:310px 1fr 310px;gap:24px;align-items:stretch;z-index:2}
+  .box{background:#fff;border:1px solid var(--line);padding:20px 24px;min-height:230px}
+  .pain{box-shadow:8px 8px 0 var(--orange)}
+  .elastic{box-shadow:8px 8px 0 var(--blue)}
+  .benefit{box-shadow:8px 8px 0 var(--teal)}
+  .box h2{font-size:25px;font-weight:600;line-height:1.12;letter-spacing:-.7px;margin:10px 0}
+  .box p{font-size:16px;line-height:1.42;color:var(--char)}
+  .capacity{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:end;height:84px;border-bottom:1px solid var(--ink)}
+  .capacity i{display:block;background:var(--slate-l);border:1px solid var(--line);transform-origin:bottom;animation:barRise 2.8s ease-in-out infinite}
+  .capacity i:nth-child(1){height:22px}.capacity i:nth-child(2){height:38px;animation-delay:.15s}.capacity i:nth-child(3){height:58px;background:var(--blue-l);animation-delay:.3s}.capacity i:nth-child(4){height:78px;background:var(--orange);animation-delay:.45s}
+  .labels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px;font:600 9.5px var(--mono);text-transform:uppercase;color:var(--grey)}
+  @keyframes barRise{0%,100%{transform:scaleY(.35);opacity:.58}45%,65%{transform:scaleY(1);opacity:1}}
+</style>
+</head>
+<body data-foot="Cisco Secure Email Gateway">
+<div class="z">
+  <div class="eyebrow in1">Scenario 03 · capacity pressure</div>
+  <h1 class="in2">Connect queue growth with gateway capacity.</h1>
+  <p class="sub in3">The customer wants to know whether delivery pressure comes from traffic volume, queue buildup, or host resource drift.</p>
+</div>
+<section class="stage">
+  <article class="box pain in3">
+    <div class="tag">Pain</div>
+    <h2>Traffic peaks can hide emerging capacity limits.</h2>
+    <p>Mail may still move, but rising queues and resource drift can signal a future service risk.</p>
+  </article>
+  <article class="box elastic in4">
+    <div class="tag">Elastic approach</div>
+    <h2>Track queues beside host and system metrics.</h2>
+    <p>Elastic links queue trends with CPU, RAM, disk I/O, system utilization, SMTP connections, and latest host status.</p>
+    <div class="capacity"><i></i><i></i><i></i><i></i></div>
+    <div class="labels"><span>CPU</span><span>RAM</span><span>Queue</span><span>I/O</span></div>
+  </article>
+  <article class="box benefit in5">
+    <div class="tag">Benefit</div>
+    <h2>Support capacity planning with operational evidence.</h2>
+    <p>The team can explain when to investigate a gateway, rebalance traffic, or plan scaling with data from the same view.</p>
+  </article>
+</section>
+<script src="style/eweb.js"></script>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

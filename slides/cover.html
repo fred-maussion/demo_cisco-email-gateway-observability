@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cisco Email Gateway POC</title>
+<link rel="stylesheet" href="style/eweb.css">
+<style>
+  h1{font-size:78px;line-height:.97;letter-spacing:-3px;margin-top:122px;max-width:580px}
+  .sub{font-size:19px;max-width:510px;margin-top:24px}
+  .chips{margin-top:34px;display:flex;gap:10px;flex-wrap:wrap;max-width:560px}
+  .window{position:absolute;left:654px;top:118px;width:552px;height:342px;border:1px solid var(--ink);background:#fff;box-shadow:10px 10px 0 var(--blue);z-index:2}
+  .winbar{height:30px;border-bottom:1px solid var(--ink);display:flex;align-items:center;gap:7px;padding:0 12px;font:500 10.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--grey)}
+  .dot{width:8px;height:8px;border:1px solid var(--ink);border-radius:50%}
+  .window img{width:100%;height:311px;object-fit:cover;object-position:50% 8%;display:block}
+  .caption{position:absolute;left:654px;top:498px;width:510px;font-size:17px;line-height:1.45;color:var(--char);z-index:2}
+</style>
+</head>
+<body class="soft" data-foot="Cisco Secure Email Gateway">
+<div class="z">
+  <div class="eyebrow in1">Customer proof of concept</div>
+  <h1 class="in2">Operational visibility for Cisco Secure Email Gateway.</h1>
+  <p class="sub in3">A metrics-only demo for email administrators who need to detect delivery pressure before business users feel the impact.</p>
+  <div class="chips in4">
+    <span class="chip on">Persona: email admin</span>
+    <span class="chip">Metrics only</span>
+  </div>
+</div>
+<div class="window in3">
+  <div class="winbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>Elastic dashboard</div>
+  <img src="assets/elastic-cisco-email-overview-generic.png" alt="Elastic Cisco Secure Email Gateway overview dashboard">
+</div>
+<p class="caption in5">Elastic brings gateway health, mail flow, queue pressure, destination-domain delivery, and host status into one operational view.</p>
+<script src="style/eweb.js"></script>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

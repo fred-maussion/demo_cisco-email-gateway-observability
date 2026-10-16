@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>POC framing</title>
+<link rel="stylesheet" href="style/eweb.css">
+<style>
+  h1{font-size:46px;max-width:820px}
+  .sub{max-width:720px}
+  .cols{position:absolute;left:72px;right:72px;top:292px;display:grid;grid-template-columns:505px 1fr;gap:42px;z-index:2}
+  .pain{padding:26px 28px;box-shadow:8px 8px 0 var(--orange)}
+  .pain h2{font-size:30px;line-height:1.12;font-weight:600;letter-spacing:-.8px;margin-bottom:18px}
+  .pain p{font-size:17px;line-height:1.45;color:var(--char)}
+  .signals{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .signal{height:48px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;padding:0 16px;font-weight:600;color:var(--ink)}
+  .signal:nth-child(odd){box-shadow:5px 5px 0 var(--teal)}
+  .signal:nth-child(even){box-shadow:5px 5px 0 var(--blue-l)}
+</style>
+</head>
+<body data-foot="Cisco Secure Email Gateway">
+<div class="z">
+  <div class="eyebrow in1">Customer challenge</div>
+  <h1 class="in2">Email delivery issues need to be visible before tickets arrive.</h1>
+  <p class="sub in3">For an email administrator, the first question is simple: is the problem coming from the gateway, a destination domain, or normal traffic variation?</p>
+</div>
+<section class="cols">
+  <article class="card pain in3">
+    <div class="tag">Current challenge</div>
+    <h2>Email teams need earlier warning signs than helpdesk tickets.</h2>
+    <p>Elastic shifts the starting point from user-reported symptoms to live operational signals.</p>
+  </article>
+  <div class="signals in4">
+    <div class="signal">Gateway health</div>
+    <div class="signal">Mail flow rates</div>
+    <div class="signal">Bounce rates</div>
+    <div class="signal">Queue pressure</div>
+    <div class="signal">SMTP connections</div>
+    <div class="signal">Host status</div>
+    <div class="signal">Destination domains</div>
+    <div class="signal">Fleet trends</div>
+  </div>
+</section>
+<script src="style/eweb.js"></script>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>
